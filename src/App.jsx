@@ -23,15 +23,15 @@ class App extends Component {
     return (
       <div className="App">
         <section className="Header">
-          <div>
-            <h1>Pedro Machado</h1>
+          <div className="Name">
+            <h1 className="py-4">Pedro Machado</h1>
           </div>
           <div>
-            {/* <img src="/images/cover.jpg" alt="cover" /> */}
-            <img src="#" alt="cover" />
+            <img src="/images/small.jpg" alt="cover" />
+            {/* <img src="#" alt="cover" /> */}
           </div>
           <div>
-            <h2>Fullstack Developer</h2>
+            <h2 className="py-4">Fullstack Developer</h2>
           </div>
         </section>
         <section>
@@ -41,9 +41,14 @@ class App extends Component {
             <h3 onClick={() => this.handleTabChange("contact")}>Contact</h3>
           </div>
           <div>
-            {(this.state.activeTab === "about" && (
-              <TabText tab={this.state.activeTab} />
+            {(!this.state.activeTab && (
+              <>
+                <p>We are what we do</p>
+              </>
             )) ||
+              (this.state.activeTab === "about" && (
+                <TabText tab={this.state.activeTab} />
+              )) ||
               (this.state.activeTab === "skills" && (
                 <TabText tab={this.state.activeTab} />
               )) ||

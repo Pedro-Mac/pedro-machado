@@ -3,4 +3,26 @@
   font-family: "Lora", sans-serif;
   width: 80%;
   margin: 0 auto;
+
+  .Header {
+    margin: 3rem 0 0 0;
+    div {
+      color: #d0d0d0;
+      background-color: #1e2228;
+      width: 100%;
+
+      h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
