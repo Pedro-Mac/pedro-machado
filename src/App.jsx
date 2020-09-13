@@ -20,6 +20,7 @@ class App extends Component {
   };
 
   render() {
+    const activeTab = this.state.activeTab;
     return (
       <div className="App">
         <section className="Header">
@@ -30,17 +31,47 @@ class App extends Component {
             <img src="/images/small.jpg" alt="cover" />
             {/* <img src="#" alt="cover" /> */}
           </div>
-          <div>
+          <div className="Stack">
             <h2 className="py-4">Fullstack Developer</h2>
           </div>
         </section>
-        <section>
-          <div className="d-flex">
-            <h3 onClick={() => this.handleTabChange("about")}>About me</h3>
-            <h3 onClick={() => this.handleTabChange("skills")}>Skills</h3>
-            <h3 onClick={() => this.handleTabChange("contact")}>Contact</h3>
+        <section className="Info-Container mt-5">
+          <div className="d-flex justify-content-between">
+            <div
+              className="Tab-Container"
+              style={{ backgroundColor: activeTab === "about" && "#1e2228" }}
+            >
+              <h3
+                onClick={() => this.handleTabChange("about")}
+                style={{ color: activeTab === "about" && "#1e2228" }}
+              >
+                About me
+              </h3>
+            </div>
+            <div
+              className="Tab-Container"
+              style={{ backgroundColor: activeTab === "skills" && "#1e2228" }}
+            >
+              <h3
+                onClick={() => this.handleTabChange("skills")}
+                style={{ color: activeTab === "skills" && "#1e2228" }}
+              >
+                Skills
+              </h3>
+            </div>
+            <div
+              className="Tab-Container"
+              style={{ backgroundColor: activeTab === "contact" && "#1e2228" }}
+            >
+              <h3
+                onClick={() => this.handleTabChange("contact")}
+                style={{ color: activeTab === "contact" && "#1e2228" }}
+              >
+                Contact
+              </h3>
+            </div>
           </div>
-          <div>
+          <div className="Text-Container mt-5">
             {(!this.state.activeTab && (
               <>
                 <p>We are what we do</p>
