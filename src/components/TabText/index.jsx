@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./TabText.scss";
+
 function TabText(props) {
   return (
     <>
@@ -31,8 +33,12 @@ function TabText(props) {
           <>
             <p>lorem@ipsum.com</p>
             <p>+48 514 279 063</p>
-            <p>LinkedIn</p>
-            <p>Github</p>
+            <a href="https://www.linkedin.com/in/pedrotmachado/" target="blank">
+              LinkedIn
+            </a>
+            <a href="https://github.com/Pedro-Mac" target="blank">
+              Github
+            </a>
           </>
         ))}
     </>

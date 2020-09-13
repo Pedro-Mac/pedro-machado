@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import TabText from "./components/TabText";
+import Tab from "./components/Tab";
 
 import "./App.scss";
 
@@ -9,7 +10,7 @@ class App extends Component {
     super();
 
     this.state = {
-      activeTab: "",
+      activeTab: "about",
     };
   }
 
@@ -35,56 +36,36 @@ class App extends Component {
             <h2 className="py-4">Fullstack Developer</h2>
           </div>
         </section>
-        <section className="Info-Container mt-5">
+        <section className="Info-Container">
           <div className="d-flex justify-content-between">
-            <div
-              className="Tab-Container"
-              style={{ backgroundColor: activeTab === "about" && "#1e2228" }}
-            >
-              <h3
-                onClick={() => this.handleTabChange("about")}
-                style={{ color: activeTab === "about" && "#1e2228" }}
-              >
-                About me
-              </h3>
-            </div>
-            <div
-              className="Tab-Container"
-              style={{ backgroundColor: activeTab === "skills" && "#1e2228" }}
-            >
-              <h3
-                onClick={() => this.handleTabChange("skills")}
-                style={{ color: activeTab === "skills" && "#1e2228" }}
-              >
-                Skills
-              </h3>
-            </div>
-            <div
-              className="Tab-Container"
-              style={{ backgroundColor: activeTab === "contact" && "#1e2228" }}
-            >
-              <h3
-                onClick={() => this.handleTabChange("contact")}
-                style={{ color: activeTab === "contact" && "#1e2228" }}
-              >
-                Contact
-              </h3>
-            </div>
+            <Tab
+              handleTab={() => this.handleTabChange("about")}
+              tabTitle="About me"
+              stateTab={activeTab}
+              tab="about"
+            />
+            <Tab
+              handleTab={() => this.handleTabChange("skills")}
+              tabTitle="Skills"
+              stateTab={activeTab}
+              tab="skills"
+            />
+            <Tab
+              handleTab={() => this.handleTabChange("contact")}
+              tabTitle="Contact"
+              stateTab={activeTab}
+              tab="contact"
+            />
           </div>
           <div className="Text-Container mt-5">
-            {(!this.state.activeTab && (
-              <>
-                <p>We are what we do</p>
-              </>
+            {(this.state.activeTab === "about" && (
+              <TabText tab={activeTab} />
             )) ||
-              (this.state.activeTab === "about" && (
-                <TabText tab={this.state.activeTab} />
-              )) ||
               (this.state.activeTab === "skills" && (
-                <TabText tab={this.state.activeTab} />
+                <TabText tab={activeTab} />
               )) ||
               (this.state.activeTab === "contact" && (
-                <TabText tab={this.state.activeTab} />
+                <TabText tab={activeTab} />
               ))}
           </div>
         </section>
