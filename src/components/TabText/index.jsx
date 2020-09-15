@@ -33,10 +33,20 @@ function TabText(props) {
           <>
             <p>lorem@ipsum.com</p>
             <p>+48 514 279 063</p>
-            <a href="https://www.linkedin.com/in/pedrotmachado/" target="blank">
+
+            <a
+              href="https://www.linkedin.com/in/pedrotmachado/"
+              target="blank"
+              className="Anchor"
+            >
               LinkedIn
             </a>
-            <a href="https://github.com/Pedro-Mac" target="blank">
+
+            <a
+              href="https://github.com/Pedro-Mac"
+              target="blank"
+              className="Anchor"
+            >
               Github
             </a>
           </>

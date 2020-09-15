@@ -10,7 +10,7 @@ class App extends Component {
     super();
 
     this.state = {
-      activeTab: "about",
+      activeTab: "contact",
     };
   }
 
@@ -22,22 +22,24 @@ class App extends Component {
 
   render() {
     const activeTab = this.state.activeTab;
+
     return (
       <div className="App">
         <section className="Header">
-          <div className="Name">
+          <div className="Name d-flex align-items-end">
             <h1 className="py-4">Pedro Machado</h1>
           </div>
-          <div>
-            <img src="/images/small.jpg" alt="cover" />
-            {/* <img src="#" alt="cover" /> */}
+          <div className="Image">
+            {(window.innerWidth < 768 && (
+              <img src="/images/small.jpg" alt="cover" />
+            )) || <img src="/images/cover.jpg" alt="cover" />}
           </div>
           <div className="Stack">
             <h2 className="py-4">Fullstack Developer</h2>
           </div>
         </section>
         <section className="Info-Container">
-          <div className="d-flex justify-content-between">
+          <div className={"d-flex"}>
             <Tab
               handleTab={() => this.handleTabChange("about")}
               tabTitle="About me"
@@ -57,7 +59,7 @@ class App extends Component {
               tab="contact"
             />
           </div>
-          <div className="Text-Container mt-5">
+          <div className="d-flex flex-column Text-Container mt-5">
             {(this.state.activeTab === "about" && (
               <TabText tab={activeTab} />
             )) ||

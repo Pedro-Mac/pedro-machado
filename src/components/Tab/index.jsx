@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Tab.scss";
+
 const Tab = (props) => {
   return (
     <div
