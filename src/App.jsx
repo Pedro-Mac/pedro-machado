@@ -35,7 +35,7 @@ class App extends Component {
             )) || <img src="/images/cover.jpg" alt="cover" />}
           </div>
           <div className="Stack">
-            <h2 className="py-4">Fullstack Developer</h2>
+            <h2 className="py-4 py-lg-0">Fullstack Developer</h2>
           </div>
         </section>
         <section className="Info-Container">
@@ -59,7 +59,7 @@ class App extends Component {
               tab="contact"
             />
           </div>
-          <div className="Text-Container d-flex flex-column  mt-5">
+          <div className=" d-flex flex-column  mt-md-5 mt-sm-5 mt-lg-4 Text-Container">
             {(this.state.activeTab === "about" && (
               <TabText tab={activeTab} />
             )) ||

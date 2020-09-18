@@ -53,12 +53,13 @@
 
 @media (min-width: 1025px) {
   .App {
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: 80%;
     max-width: 100rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 50%);
+    grid-row-gap: 3rem;
 
     .Header {
       grid-column: 1 / 13;
@@ -78,7 +79,7 @@
         border-top-right-radius: 7px;
 
         h1 {
-          font-size: 7rem;
+          font-size: 3rem;
           margin-left: 4rem;
         }
       }
@@ -86,10 +87,12 @@
         grid-column: 5 / 13;
         grid-row: 2/3;
         display: flex;
+        align-items: flex-start;
         border-bottom-right-radius: 7px;
 
         h2 {
-          font-size: 3rem;
+          margin-top: 0;
+          font-size: 2rem;
           margin-left: 4rem;
         }
       }
@@ -110,17 +113,19 @@
     .Info-Container {
       grid-row: 2/3;
       grid-column: 5/13;
+      margin: 0;
 
       div {
         h3 {
-          font-size: 2.25rem;
+          font-size: 1rem;
         }
       }
 
       .Text-Container {
         p,
         a {
-          font-size: 1.75rem;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
         }
       }
     }
