@@ -55,7 +55,7 @@
   .App {
     margin-top: 3rem;
     width: 80%;
-    max-width: 100rem;
+    max-width: 55rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 50%);
@@ -135,6 +135,6 @@
 
 @media (min-width: 3000px) {
   .App {
-    max-width: 120rem;
+    max-width: 60rem;
   }
 }
