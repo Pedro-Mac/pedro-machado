@@ -39,7 +39,7 @@ class App extends Component {
           </div>
         </section>
         <section className="Info-Container">
-          <div className={"d-flex"}>
+          <div className="d-flex">
             <Tab
               handleTab={() => this.handleTabChange("about")}
               tabTitle="About me"
@@ -59,7 +59,7 @@ class App extends Component {
               tab="contact"
             />
           </div>
-          <div className="d-flex flex-column Text-Container mt-5">
+          <div className="Text-Container d-flex flex-column  mt-5">
             {(this.state.activeTab === "about" && (
               <TabText tab={activeTab} />
             )) ||
