@@ -59,7 +59,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 50%);
-    grid-row-gap: 3rem;
 
     .Header {
       grid-column: 1 / 13;
@@ -114,6 +113,8 @@
       grid-row: 2/3;
       grid-column: 5/13;
       margin: 0;
+      overflow: hidden;
+      margin-top: 2rem;
 
       div {
         h3 {
