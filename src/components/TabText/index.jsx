@@ -31,7 +31,7 @@ function TabText(props) {
         )) ||
         (props.tab === "contact" && (
           <>
-            <p>lorem@ipsum.com</p>
+            <p>contact@pedromachado.eu</p>
             <p>+48 514 279 063</p>
 
             <a
