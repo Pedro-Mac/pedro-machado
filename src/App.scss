@@ -1,10 +1,9 @@
 .App {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', sans-serif;
   width: 80%;
   margin: 0 auto;
 
   .Header {
-    margin: 3rem 0 0 0;
     box-shadow: 0 7px 10px 2px rgba(0, 0, 0, 0.33);
     border-radius: 8px;
     overflow: hidden;
@@ -38,13 +37,25 @@
 
   .Info-Container {
     color: #1e2228;
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     div {
       display: flex;
       justify-content: space-between;
+
+      // .Tab-Container {
+      //   h3 {
+      //     font-size: 1rem;
+      //   }
+      // }
+
+      p,
+      a {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
     }
   }
 }
 
-@import "./AppMedia";
+@import './AppMedia';
