@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import "./TabText.scss";
+import './TabText.scss';
 
 function TabText(props) {
   return (
     <>
-      {(props.tab === "about" && (
+      {(props.tab === 'about' && (
         <>
           <p>
             I am a fullstack developer, with a big passion for innovation,
             adventure and nature.
           </p>
           <p>
-            My goal is to add value to creative projects with meaningful
+            My mission is to add value to creative projects with meaningful
             missions.
           </p>
         </>
       )) ||
-        (props.tab === "skills" && (
+        (props.tab === 'skills' && (
           <>
             <p>
               I have a strong knowledge of Javascript, React, NodeJS with
@@ -29,7 +29,7 @@ function TabText(props) {
             </p>
           </>
         )) ||
-        (props.tab === "contact" && (
+        (props.tab === 'contact' && (
           <>
             <p>contact@pedromachado.eu</p>
             <p>+48 514 279 063</p>
